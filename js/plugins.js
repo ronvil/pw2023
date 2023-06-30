@@ -21,4 +21,16 @@
   }
 }());
 
-// Place any jQuery/helper plugins in here.
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  slidesPerView: "auto",
+  spaceBetween: 16,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+

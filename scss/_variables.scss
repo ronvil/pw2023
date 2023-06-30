@@ -1,5 +1,49 @@
+$blue: #0038a7;
+$red: #ce1127;
+
 @mixin transition {
   transition: all .3s;
+}
+
+@mixin gradient {
+  background: rgb(206,17,39);
+  background: linear-gradient(90deg, rgba(206,17,39,1) 0%, rgba(0,56,167,1) 100%); 
+}
+
+@mixin transition {
+  transition: all .3s ease-in;
+}
+
+@mixin gradientline {
+  position: relative;
+  &::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		height: 1px;
+		@include gradient;
+	}
+}
+
+@mixin card-horizontal {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  &__title {
+    margin-top: 0;
+  }
+  &__thumb {
+    flex: 0 0 30%;
+  }
+}
+
+@mixin card-vertical {
+  display: block;
+  &__title {
+    margin-top: 1rem;
+  }
 }
 
 @mixin for-phone-only {
