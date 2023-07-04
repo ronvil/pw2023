@@ -41,6 +41,8 @@ function custom_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'custom_body_classes' );
 
+// Image Size
+add_image_size( 'article-card', 1920, 1080 );
 
 // Remove width and height attributes to images
 function remove_image_size_attributes( $html ) {
@@ -53,10 +55,21 @@ function remove_image_size_attributes( $html ) {
 	// Remove image size attributes from images added to a WordPress post
 	add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
 
+// Remove height/width attributes on avatar img tags.
+function myscript_remove_dimensions_avatars( $avatar ) {
+
+	$avatar = preg_replace( "/(width|height)=\'\d*\'\s/", "", $avatar );
+
+	return $avatar;
+
+}
+add_filter( 'get_avatar', 'myscript_remove_dimensions_avatars', 10 );
+
 
 // nav menus
 register_nav_menus( array(
-	'mainmenu'   => __( 'Main menu for top and footer' ),
+	'mainmenu'   => __( 'Main menu' ),
+	'legalmenu'   => __( 'Menu at the footer' ),
 ) );
 
 
@@ -186,6 +199,7 @@ function add_theme_scripts() {
 	wp_enqueue_style( 'sidr-style', get_template_directory_uri() . '/css/sidr.bare.min.css' );
 	
 	// Scripts
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-3.11.2.min.js', array(), '3.11.2', true );
 	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 	

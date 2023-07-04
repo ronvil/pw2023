@@ -41,8 +41,8 @@ $red: #ce1127;
 
 @mixin card-vertical {
   display: block;
-  &__title {
-    margin-top: 1rem;
+  &__thumb {
+    margin-bottom: 1rem;
   }
 }
 

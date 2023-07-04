@@ -1,11 +1,7 @@
-  <footer role="contentinfo">
-
-  </footer>
+  <?php get_template_part( 'inc/component', 'footer' ); ?>
 
   <?php wp_footer(  ); ?>
 
-  <!-- Google Analytics -->
-  
 </body>
 
 </html>

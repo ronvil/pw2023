@@ -120,6 +120,16 @@ main {
 			text-decoration: underline;
 		}
 	}
+	&__categories {
+		@include sub-size;
+		@include sans-serif;
+		text-transform: uppercase;
+		color: #555;
+		margin-bottom: .5rem;
+		a {
+			color: #555;
+		}
+	}
 	&__thumb {
 		a {
 			display: inline-block;
@@ -141,6 +151,8 @@ main {
 	&__meta {
 		font-style: italic;
 		@include sub-size;
+		color: #555;
+		margin-top: .5rem;
 	}
 	&__excerpt {
 		margin-bottom: 0;
@@ -295,6 +307,9 @@ main {
 	margin-bottom: 1rem;
 	.card {
 		@include card-vertical;
+		&__categories {
+			display: none;
+		}
 		@include for-tablet-landscape-up {
 			@include card-horizontal;
 			margin-bottom: 0;
@@ -440,12 +455,19 @@ main {
 	&__nav {
 		a {
 			display: inline-block;
+			&:hover {
+				.socials__icon {
+					fill: $red;
+					transform: translateY(-4px);
+				}
+			}
 		}
 	}
 	&__icon {
 		fill: #333;
 		width: 50px;
 		height: 50px;
+		@include transition;
 	}
 	@include for-tablet-portrait-up {
 		&__container {
@@ -514,6 +536,7 @@ main {
 
 .legal {
 	background: #333;
+	@include sans-serif;
 	color: #fff;
 	@include sub-size;
 	text-align: right;
@@ -522,5 +545,138 @@ main {
 	}
 	p {
 		margin: 0;
+	}
+}
+
+.singleart {
+	img {
+		max-width: 100%;
+	}
+	&__container {
+		max-width: 800px;
+		margin: auto;
+	}
+	&__header {
+		&__container {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			text-align: center;
+		}
+		.category-link {
+			@include sub-size;
+			color: #333;
+			@include sans-serif;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+	&__meta {
+		@include sub-size;
+		font-style: italic;
+		color: #333;
+	}
+	&__thumb {
+		@include for-tablet-landscape-up {
+			margin: 0 -2rem;
+		}
+	}
+	.drop::first-letter {
+		float: left;
+		@include h1-size;
+		font-weight: bold;
+		padding-top: .5rem;
+		color: $red;
+	}
+	&__content {
+		blockquote {
+			text-align: center;
+			border-top: 1px solid #efefef;
+			border-bottom: 1px solid #efefef;
+			font-style: italic;
+			@include h6-size;
+			margin: 2rem 0;
+			padding: 2rem;
+			position: relative;
+			color: #666;
+			p {
+				position: relative;
+				z-index: 2;
+			}
+			&::before {
+				content: '"';
+				font-size: calc((var(--h1-size) * var(--scale)) * var(--scale) * var(--scale) * var(--scale) * var(--scale) * var(--scale));
+				position: absolute;
+				left: 1rem;
+				top: 1rem;
+				line-height: 1;
+				color: #efefef;
+				z-index: 1;
+			}
+			&::after {
+				content: '"';
+				font-size: calc((var(--h1-size) * var(--scale)) * var(--scale) * var(--scale) * var(--scale) * var(--scale) * var(--scale));
+				position: absolute;
+				bottom: 0;
+				right: 1rem;
+				line-height: 0;
+				color: #efefef;
+				z-index: 1;
+			}
+		}
+		h2 {
+			@include base-size;
+			text-transform: uppercase;
+			margin-top: 2rem;
+		}
+		.wp-block-image {
+			margin: 2rem 0;
+			background: #efefef;
+			padding: 1rem;
+			@include for-tablet-landscape-up {
+				margin: 2rem -1rem;
+			}
+			figcaption {
+				@include sub-size;
+				color: #555;
+				margin-bottom: 0;
+				@include sans-serif;
+			}
+		}
+	}
+}
+
+.post-template-template-alternate {
+	.singleart {
+		&__header {
+			&__container {
+				@include for-tablet-landscape-up {
+					height: 50vh;
+					flex-direction: row-reverse;
+					gap: 1rem;
+					align-items: center;
+					max-width: 948px;
+					> div {
+						flex: 0 0 50%;
+					}
+					.singleart__thumb {
+						margin: 0;
+						height: 100%;
+						img {
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+				@include for-desktop-up {
+					max-width: 1248px;
+					height: 65vh;
+				}
+				@include for-big-desktop-up {
+					max-width: 1600px;
+					height: 80vh;
+				}
+			}
+		}
 	}
 }
