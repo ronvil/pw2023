@@ -10,15 +10,7 @@
           <div class="singleart__container singleart__header__container container">
             
             <div class="singleart__headertext">
-              <?php get_template_part('inc/component', 'category'); ?>
               <h1 class="singleart__title"><?php the_title(); ?></h1>
-              <div class="singleart__meta">
-                <?php if ( function_exists( 'coauthors_posts_links' ) ) {
-                  coauthors_posts_links( ', ', ' at ', 'ni ', null );
-                } else { ?>
-                  <?php the_author_posts_link();
-                } ?>, <time><?php the_time('F j, Y'); ?></time>
-              </div>
             </div>
 
             <div class="singleart__thumb">
@@ -40,8 +32,7 @@
       <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
 
-    <?php get_template_part('inc/component', 'relatedposts'); ?>
-
+    
 
   </main>
 

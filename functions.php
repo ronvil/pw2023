@@ -103,7 +103,7 @@ function numeric_posts_nav() {
 			$links[] = $paged + 1;
 	}
 
-	echo '<div class="navigation-container"><ul>' . "\n";
+	echo '<nav class="navigation-container"><ul>' . "\n";
 
 	/** Previous Post Link */
 	if ( get_previous_posts_link() )
@@ -139,7 +139,7 @@ function numeric_posts_nav() {
 	if ( get_next_posts_link() )
 			printf( '<li>%s</li>' . "\n", get_next_posts_link() );
 
-	echo '</ul></div>' . "\n";
+	echo '</ul></nav>' . "\n";
 
 }
 

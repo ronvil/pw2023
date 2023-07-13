@@ -680,3 +680,167 @@ main {
 		}
 	}
 }
+
+.archive {
+	&__header {
+		&__container {
+			max-width: 800px;
+			text-align: center;
+			@include gradientline;
+			&::after {
+				height: 2px;
+			}
+			margin-bottom: 2rem;
+			h1 {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__cardcontainer {
+		max-width: 800px;
+	}
+}
+
+.navigation-container {
+	margin: 2rem 0;
+	ul {
+		display: flex;
+		justify-content: center;
+	}
+	a {
+		display: inline-block;
+		background: $red;
+		color: #fff;
+		text-decoration: none;
+		margin: 0 .5rem;
+		padding: .5rem 1rem;
+		border-radius: 4px;
+		@include transition;
+		&:hover {
+			background: darken($color: $red, $amount: 10);
+		}
+	}
+	.active {
+		a {
+			color: $red;
+			background: #fff;
+			border: 1px solid;
+		}
+	}
+	@include sans-serif;
+	text-transform: uppercase;
+}
+
+.glightbox-searchbar {
+	.gclose {
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		background: none;
+		svg {
+			fill: #fff;
+		}
+	}
+	.gslide-media {
+		background: none;
+	}
+	.search-form {
+		@include sans-serif;
+		display: flex;
+		label {
+			display: flex;
+			width: 100%;
+		}
+		.search-field {
+			@include h5-size;
+			width: 100%;
+			padding: 1rem;
+			background: none;
+			border: none;
+			border-bottom: 1px solid #666;
+			margin-right: 1rem;
+			color: #fff;
+			@include transition;
+			&::placeholder {
+				color: #fff;
+			}
+			&:focus {
+				border-bottom: 1px solid #fff;
+				outline: none;
+			}
+		}
+		input[type=submit] {
+			text-transform: uppercase;
+			cursor: pointer;
+			padding: .5rem 1rem;
+			outline: none;
+			border-radius: 4px;
+			background: $blue;
+			color: #fff;
+			border: none;
+		}
+	}
+}
+
+.relatedposts {
+	background:rgba($color: #000000, $alpha: .025);
+	margin-top: 2rem;
+	.card {
+		@include card-vertical;
+	}
+	@include for-tablet-portrait-up {
+		&__container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+		}
+		.section__head {
+			grid-column: span 2;
+			h1 {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include for-desktop-up {
+		&__container {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.section__head {
+			grid-column: span 4;
+		}
+	}
+}
+
+.author {
+	&__header {
+		&__container {
+			text-align: left;
+		}
+		h1 {
+			@include h1-size;
+			margin-bottom: 1rem;
+		}
+	}
+	&__thumb {
+		img {
+			border-radius: 100rem;
+		}
+	}
+	&__bio {
+		margin-bottom: 1rem;
+		font-style: italic;
+	}
+	@include for-tablet-portrait-up {
+		&__header {
+			&__container {
+				display: flex;
+				h1 {
+					margin-top: 0;
+				}
+			}
+		}
+		&__thumb {
+			margin-right: 1rem;
+		}
+	}
+}

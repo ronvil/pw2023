@@ -18,10 +18,16 @@
       )); ?>
     </nav>
 
-    <a id="search-toggle" href="#" class="search-toggle" aria-label="toggle search"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a id="search-toggle" href="#searchbar" class="search-toggle" aria-label="toggle search"><i class="fa-solid fa-magnifying-glass"></i></a>
 
     <a id="menu-toggle" href="#sidr" class="menu-toggle" aria-label="mobile navigation"><i class="fa-solid fa-bars"></i></a>
 
   </div>
 
 </header>
+
+<div id="searchbar" style="display: none;">
+  <div class="inline-inner">
+    <?php get_search_form(); ?>
+  </div>
+</div>

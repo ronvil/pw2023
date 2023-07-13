@@ -11,11 +11,11 @@
       </div>
 
       <nav class="socials__nav">
-        <a href="https://www.facebook.com/ctuhrph/" class="socials__link" target="_blank" title="CTUHR Facebook page" rel="nofollow"><svg class="socials__icon"><use xlink:href="#facebook" /></svg></a>
-        <a href="https://twitter.com/CTUHR/" class="socials__link" target="_blank" title="CTUHR Twitter account" rel="nofollow"><svg class="socials__icon"><use xlink:href="#twitter" /></svg></a>
-        <a href="https://www.instagram.com/ctuhrph/" class="socials__link" target="_blank" title="CTUHR Instagram page" rel="nofollow"><svg class="socials__icon"><use xlink:href="#instagram" /></svg></a>
-        <a href="https://www.instagram.com/ctuhrph/" class="socials__link" target="_blank" title="CTUHR Instagram page" rel="nofollow"><svg class="socials__icon"><use xlink:href="#viber" /></svg></a>
-        <a href="https://www.instagram.com/ctuhrph/" class="socials__link" target="_blank" title="CTUHR Instagram page" rel="nofollow"><svg class="socials__icon"><use xlink:href="#telegram" /></svg></a>
+        <a href="https://www.facebook.com/pinoyweekly.org" class="socials__link" target="_blank" title="Pinoy Weekly Facebook page" rel="nofollow"><svg class="socials__icon"><use xlink:href="#facebook" /></svg></a>
+        <a href="https://twitter.com/pinoyweekly" class="socials__link" target="_blank" title="Pinoy Weekly Twitter account" rel="nofollow"><svg class="socials__icon"><use xlink:href="#twitter" /></svg></a>
+        <a href="https://www.instagram.com/pinoyweekly/" class="socials__link" target="_blank" title="Pinoy Weekly Instagram page" rel="nofollow"><svg class="socials__icon"><use xlink:href="#instagram" /></svg></a>
+        <a href="https://invite.viber.com/?g2=AQAKflAhzNADVlCKmTY80QW7sEYoDMpYntRatY3hB8nhQEQLzjKBnWwPd%2FYbvIIU" class="socials__link" target="_blank" title="Pinoy Weekly Viber Channel" rel="nofollow"><svg class="socials__icon"><use xlink:href="#viber" /></svg></a>
+        <a href="https://t.me/pinoyweekly" class="socials__link" target="_blank" title="Pinoy Weekly Telegram Channel" rel="nofollow"><svg class="socials__icon"><use xlink:href="#telegram" /></svg></a>
       </nav>
 
     </div>

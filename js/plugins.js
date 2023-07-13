@@ -57,3 +57,9 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+const lightboxsearch = GLightbox({
+  selector: '.search-toggle',
+  height: 'auto',
+  closeButton: true,
+  skin: 'searchbar'
+});
