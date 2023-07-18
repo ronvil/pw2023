@@ -857,7 +857,7 @@ main {
 	}
 }
 
-.search {
+.search, .error404 {
 	.archive__cardcontainer {
 		text-align: center;
 		form {
@@ -869,7 +869,7 @@ main {
 	}
 }
 
-form,  {
+form {
 	input[type=text], input[type=email], input[type=search], textarea {
 		width: 100%;
 		padding: .5rem;
@@ -885,10 +885,63 @@ form,  {
 		@include sub-size;
 		color: #666;
 	}
+	input[type=submit] {
+		text-transform: uppercase;
+		@include sans-serif;
+		@include sub-size;
+		padding: .5rem 1rem;
+		cursor: pointer;
+		background: $blue;
+		color: #fff;
+		border-radius: 4px;
+		border: none;
+		@include transition;
+		&:hover {
+			background: darken($color: $blue, $amount: 10);
+		}
+	}
 }
 
 .error404 {
 	&__contentcontainer {
 		min-height: 50vh;
+	}
+}
+
+.sidr {
+	background: #efefef;
+	&__wrapper {
+		padding: 1rem;
+		position: relative;
+		height: 100vh;
+	}
+	&__menu {
+		flex-direction: column;
+		text-align: center;
+		@include sans-serif;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #333;
+			display: inline-block;
+			padding: .5rem;
+			width: 100%;
+			border-bottom: 1px solid darken($color: #efefef, $amount: 10);
+			@include transition;
+			&:hover {
+				background: darken($color: #efefef, $amount: 10);
+			}
+		}
+	}
+	&__search {
+		position: absolute;
+		bottom: 1rem;
+		.search-form {
+			margin-right: 1rem;
+			display: flex;
+		}
+		input[type=search] {
+			background: #fff;
+		}
 	}
 }

@@ -1,3 +1,18 @@
 <div id="sidr">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus nulla labore facilis, eligendi optio modi dicta. Architecto in culpa fugit dolores quod, non nesciunt saepe eveniet, impedit omnis assumenda dolorem.</p>    
+  <div class="sidr__wrapper">
+    
+    <nav class="sidr__nav" aria-label="mobile navigation">
+      <?php wp_nav_menu(array(
+        'menu' => 'mainmenu',
+        'theme_location' => 'mainmenu',
+        'menu_class' => 'sidr__menu',
+        'fallback_cb' => false
+      )); ?>
+    </nav>
+
+    <div class="sidr__search">
+      <?php get_search_form(); ?>
+    </div>
+
+  </div>
 </div>

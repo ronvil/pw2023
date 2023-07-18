@@ -31,11 +31,10 @@
       </header>
 
       <div class="archive__cardcontainer container error404__contentcontainer">
-        <p>Sorry. We did noy find what you were looking for. Try another search?</p>
+        <p>Sorry. We did not find what you were looking for. Try another search?</p>
         <?php get_search_form(); ?>
         <p>or go back <a href="<?php bloginfo( 'url' ); ?>">Home</a></p>
       </div>
-
 
     <?php endif; ?>
 
