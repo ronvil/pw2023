@@ -567,14 +567,25 @@ main {
 			@include sub-size;
 			color: #333;
 			@include sans-serif;
-			text-decoration: none;
 			text-transform: uppercase;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	&__meta {
 		@include sub-size;
 		font-style: italic;
-		color: #333;
+		color: #666;
+		a {
+			color: #666;
+		}
+	}
+	&__excerpt {
+		font-style: italic;
 	}
 	&__thumb {
 		@include for-tablet-landscape-up {
@@ -624,7 +635,7 @@ main {
 				z-index: 1;
 			}
 		}
-		h2 {
+		h2, h3, h4, h5, h6 {
 			@include base-size;
 			text-transform: uppercase;
 			margin-top: 2rem;
@@ -653,9 +664,10 @@ main {
 				@include for-tablet-landscape-up {
 					height: 50vh;
 					flex-direction: row-reverse;
-					gap: 1rem;
+					gap: 2rem;
 					align-items: center;
 					max-width: 948px;
+					text-align: left;
 					> div {
 						flex: 0 0 50%;
 					}
@@ -842,5 +854,41 @@ main {
 		&__thumb {
 			margin-right: 1rem;
 		}
+	}
+}
+
+.search {
+	.archive__cardcontainer {
+		text-align: center;
+		form {
+			display: flex;
+		}
+		label {
+			width: 100%;
+		}
+	}
+}
+
+form,  {
+	input[type=text], input[type=email], input[type=search], textarea {
+		width: 100%;
+		padding: .5rem;
+		border-radius: 4px;
+		border: 1px solid rgba(0,0,0,.025);
+		border-bottom: 1px solid rgba(0,0,0,.125);
+		outline: none;
+		background: rgba(0,0,0,.025);
+	}
+	label {
+		@include sans-serif;
+		text-transform: uppercase;
+		@include sub-size;
+		color: #666;
+	}
+}
+
+.error404 {
+	&__contentcontainer {
+		min-height: 50vh;
 	}
 }

@@ -204,7 +204,7 @@ function add_theme_scripts() {
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 	
 	// Main CSS
-	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/style.min.css', array(),'0.1' );
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/style.min.css', array(),'0.1.2' );
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );

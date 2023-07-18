@@ -1334,13 +1334,24 @@ main {
   font-size: var(--sub-size);
   color: #333;
   font-family: "Merriweather Sans", sans-serif;
-  text-decoration: none;
   text-transform: uppercase;
+}
+.singleart__header a {
+  text-decoration: none;
+}
+.singleart__header a:hover {
+  text-decoration: underline;
 }
 .singleart__meta {
   font-size: var(--sub-size);
   font-style: italic;
-  color: #333;
+  color: #666;
+}
+.singleart__meta a {
+  color: #666;
+}
+.singleart__excerpt {
+  font-style: italic;
 }
 @media (min-width: 980px) {
   .singleart__thumb {
@@ -1390,7 +1401,7 @@ main {
   color: #efefef;
   z-index: 1;
 }
-.singleart__content h2 {
+.singleart__content h2, .singleart__content h3, .singleart__content h4, .singleart__content h5, .singleart__content h6 {
   font-size: var(--p-size);
   text-transform: uppercase;
   margin-top: 2rem;
@@ -1419,11 +1430,12 @@ main {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    gap: 1rem;
+    gap: 2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     max-width: 948px;
+    text-align: left;
   }
   .post-template-template-alternate .singleart__header__container > div {
     -webkit-box-flex: 0;
@@ -1639,4 +1651,36 @@ main {
   .author__thumb {
     margin-right: 1rem;
   }
+}
+
+.search .archive__cardcontainer {
+  text-align: center;
+}
+.search .archive__cardcontainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search .archive__cardcontainer label {
+  width: 100%;
+}
+
+form input[type=text], form input[type=email], form input[type=search], form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  outline: none;
+  background: rgba(0, 0, 0, 0.025);
+}
+form label {
+  font-family: "Merriweather Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: var(--sub-size);
+  color: #666;
+}
+
+.error404__contentcontainer {
+  min-height: 50vh;
 }/*# sourceMappingURL=style.css.map */
