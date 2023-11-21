@@ -80,6 +80,10 @@ nav {
 		padding: 0 .5rem;
 		display: inline-block;
 		color: #333;
+		@include transition;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	@include for-tablet-landscape-up {
 		display: block;
@@ -255,6 +259,7 @@ main {
 		overflow: hidden;
 		&__text {
 			position: absolute;
+			width: 100%;
 			padding-top: 3rem;
 			bottom: -1rem;
 			opacity: 0;
@@ -371,6 +376,9 @@ main {
 	}
 	&__info {
 		@include sub-size;
+		.category-link {
+			font-weight: bold;
+		}
 		a {
 			display: block;
 			color: #333;

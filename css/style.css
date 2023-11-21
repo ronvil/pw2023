@@ -738,6 +738,11 @@ nav ul {
   padding: 0 0.5rem;
   display: inline-block;
   color: #333;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.main-nav a:hover {
+  text-decoration: underline;
 }
 @media (min-width: 980px) {
   .main-nav {
@@ -957,6 +962,7 @@ main {
 }
 .swiper-slide__text {
   position: absolute;
+  width: 100%;
   padding-top: 3rem;
   bottom: -1rem;
   opacity: 0;
@@ -1115,6 +1121,9 @@ main {
 }
 .columncard__info {
   font-size: var(--sub-size);
+}
+.columncard__info .category-link {
+  font-weight: bold;
 }
 .columncard__info a {
   display: block;

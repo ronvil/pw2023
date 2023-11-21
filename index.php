@@ -38,7 +38,7 @@
       <div class="container issues__container">
 
         <header class="section__head">
-          <h1>I-download ang edisyong digital ng PinoyWeekly</h1>
+          <h1>I-download ang edisyong print ng PinoyWeekly</h1>
         </header>
 
         <div class="swiper">

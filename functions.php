@@ -17,6 +17,8 @@ add_theme_support( 'post-thumbnails' );
 
 add_theme_support( 'align-wide' );
 
+add_theme_support( 'responsive-embeds' );
+
 
 // Body class
 function custom_body_classes( $classes ) {
@@ -178,7 +180,7 @@ function insert_fb_in_head() {
 		echo '<meta property="og:url" content="' . get_permalink() . '"/>';
 		echo '<meta property="og:site_name" content="Oxfam Pilipinas"/>';
 	if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
-		$default_image="https://oxfam.org.ph/wp-content/uploads/2022/09/oxfampilipinas-opengraph-default.jpg"; //replace this with a default image on your server or an image in your media library
+		$default_image="https://pinoyweekly.org/wp-content/uploads/2023/11/pw-opengraph.jpg"; //replace this with a default image on your server or an image in your media library
 		echo '<meta property="og:image" content="' . $default_image . '"/>';
 	}
 	else{
@@ -204,7 +206,7 @@ function add_theme_scripts() {
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 	
 	// Main CSS
-	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/style.min.css', array(),'0.1.2' );
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/style.min.css', array(),'1.1' );
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
