@@ -96,7 +96,7 @@
           </header>
           
           <?php $the_query = new WP_Query( array(
-            'posts_per_page' => 8,
+            'posts_per_page' => 6,
             'post__not_in' =>  $exclude,
             'category_name' => 'kolum'
           ) ); ?>
@@ -109,18 +109,34 @@
 
         </div>
 
+        <div class="multimedia">
+          <header class="section__head">
+            <h1>Multimedia</h1>
+          </header>
+          <?php $the_query = new WP_Query( array(
+            'posts_per_page' => 2,
+            'post__not_in' =>  $exclude,
+            'category_name' => 'multimedia'
+          ) ); ?>
+          <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); $exclude[] = $post->ID?>
+          
+            <?php get_template_part( 'inc/multimedia', 'card' ); ?>
+          
+          <?php endwhile; wp_reset_postdata(); endif; ?>
+        </div>
+
       </section>
 
       <section class="cult">
 
-        <header class="section__head">
-          <h1>Kultura</h1>
-        </header>
+        <div class="kultura">
 
-        <div class="cult__container">
+          <header class="section__head">
+            <h1>Kultura</h1>
+          </header>
         
           <?php $the_query = new WP_Query( array(
-              'posts_per_page' => 4,
+              'posts_per_page' => 2,
               'post__not_in' =>  $exclude,
               'category_name' => 'kultura'
             ) ); ?>
@@ -130,7 +146,26 @@
             
             <?php endwhile; wp_reset_postdata(); endif; ?>
           
-          </div>
+        </div><!--  end kultura -->
+
+        <div class="samutsari">
+
+          <header class="section__head">
+            <h1>Samu't sari</h1>
+          </header>
+        
+          <?php $the_query = new WP_Query( array(
+              'posts_per_page' => 2,
+              'post__not_in' =>  $exclude,
+              'category_name' => 'samut-sari'
+            ) ); ?>
+            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); $exclude[] = $post->ID?>
+            
+              <?php get_template_part( 'inc/article', 'card' ); ?>
+            
+            <?php endwhile; wp_reset_postdata(); endif; ?>
+          
+        </div><!--  end kultura -->
 
         <div class="talasalitaan">
           <header class="section__head">
@@ -148,11 +183,10 @@
           
           <?php endwhile; wp_reset_postdata(); endif; ?>
         
-        </div>
+        </div><!-- end talasalitaan -->
           
-        </div>
-
       </section>
+    
     </div>
 
   </main>

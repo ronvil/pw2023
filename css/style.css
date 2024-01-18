@@ -1015,11 +1015,9 @@ main {
   }
 }
 
-.editorial {
-  margin-bottom: 1rem;
-}
 .editorial .card {
   display: block;
+  margin-bottom: 0;
 }
 .editorial .card__thumb {
   margin-bottom: 1rem;
@@ -1034,7 +1032,6 @@ main {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-    margin-bottom: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1066,6 +1063,7 @@ main {
 @media (min-width: 1280px) {
   .editorial .card {
     display: block;
+    margin: 0;
   }
   .editorial .card__thumb {
     margin-bottom: 1rem;
@@ -1094,6 +1092,9 @@ main {
 }
 .columncard__container {
   margin-bottom: 2rem;
+}
+.columncard__container .section__head {
+  margin-top: 2rem;
 }
 .columncard a {
   text-decoration: none;
@@ -1143,9 +1144,13 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-bottom: 1rem;
   }
   .columncard__container .section__head {
     grid-column: 1/-1;
+  }
+  .columncard__container .section__head h1 {
+    margin: 0;
   }
 }
 
@@ -1154,6 +1159,44 @@ main {
 }
 .cult .card:after {
   opacity: 0.1;
+}
+.cult .section__head {
+  margin-top: 2rem;
+}
+
+.samutsari .card__categories {
+  display: none;
+}
+
+.multimedia .card {
+  display: block;
+}
+.multimedia .card__thumb {
+  margin-bottom: 0.5rem;
+}
+.multimedia .card__title {
+  font-size: var(--p-size);
+  font-weight: var(--p-size);
+}
+.multimedia .card::after {
+  opacity: 0.1;
+}
+@media (min-width: 736px) {
+  .multimedia {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .multimedia .section__head {
+    grid-column: span 2;
+  }
+  .multimedia .section__head h1 {
+    margin-bottom: 0;
+  }
+  .multimedia .card {
+    margin-bottom: 0;
+  }
 }
 
 .talasalitaan .card {

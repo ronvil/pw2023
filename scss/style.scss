@@ -309,15 +309,14 @@ main {
 }
 
 .editorial {
-	margin-bottom: 1rem;
 	.card {
 		@include card-vertical;
+		margin-bottom: 0;
 		&__categories {
 			display: none;
 		}
 		@include for-tablet-landscape-up {
 			@include card-horizontal;
-			margin-bottom: 0;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			&__text {
@@ -338,6 +337,7 @@ main {
 		}
 		@include for-desktop-up {
 			@include card-vertical;
+			margin: 0;
 		}
 	}
 	
@@ -351,6 +351,9 @@ main {
 	display: flex;
 	&__container {
 		margin-bottom: 2rem;
+		.section__head {
+			margin-top: 2rem;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -396,8 +399,12 @@ main {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 1rem;
+			margin-bottom: 1rem;
 			.section__head {
 				grid-column: 1 / -1;
+				h1 {
+					margin: 0;
+				}
 			}
 		}
 	}
@@ -410,6 +417,48 @@ main {
 	.card {
 		&:after {
 			opacity: .1;	
+		}
+	}
+	.section__head {
+		margin-top: 2rem;
+	}
+}
+
+.samutsari {
+	.card {
+		&__categories {
+			display: none;
+		}
+	}
+}
+
+.multimedia {
+	.card {
+		display: block;
+		&__thumb {
+			margin-bottom: .5rem;
+		}
+		&__title {
+			font-size: var(--p-size);
+			font-weight: var(--p-size);
+		}
+		&::after {
+			opacity: .1;
+		}
+	}
+	@include for-tablet-portrait-up {
+		margin-bottom: 2rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		.section__head {
+			grid-column: span 2;
+			h1 {
+				margin-bottom: 0;
+			}
+		}
+		.card {
+			margin-bottom: 0;
 		}
 	}
 }
